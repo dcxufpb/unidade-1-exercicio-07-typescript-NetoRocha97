@@ -171,23 +171,29 @@ test('Inscrição estadual vazia', () => {
 test('Exercício 2 - customizado', () => {
 
   // Defina seus próprios valores para as variáveis a seguir
-  let nome_loja = "";
-  let logradouro = "";
-  let numero = 0;
-  let complemento = "";
-  let bairro = "";
-  let municipio = "";
-  let estado = "";
-  let cep = "";
-  let telefone = "";
-  let observacao = "";
-  let cnpj = "";
-  let inscricao_estadual = "";
+  let nome_loja = "Loja CRVG";
+  let logradouro = "R. Gen. Almério de Moura";
+  let numero = 131;
+  let complemento = "Estádio";
+  let bairro = "São Januário";
+  let municipio = "Rio de Janeiro";
+  let estado = "RJ";
+  let cep = "20921-060";
+  let telefone = "(21) 91898-1927";
+  let observacao = "Obs 1";
+  let cnpj = "12.111.333/12133-12";
+  let inscricao_estadual = "123.456.789.000";
 
   //E atualize o texto esperado abaixo
   expect(cupom_dados_loja_param(nome_loja, logradouro, numero, complemento,
     bairro, municipio, estado, cep, telefone, observacao, cnpj, 
     inscricao_estadual)).toBe(
-    `
+`Loja CRVG
+R. Gen. Almério de Moura, 131 Estádio
+São Januário - Rio de Janeiro - RJ
+CEP:20921-060 Tel (21) 91898-1927
+Obs 1
+CNPJ: 12.111.333/12133-12
+IE: 123.456.789.000
 `);
 });
